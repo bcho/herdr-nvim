@@ -7,6 +7,12 @@
 Neovim, built into your [herdr](https://herdr.dev) workspace: a persistent
 nvim sidebar one key away, with quick access to the files your agent works on.
 
+> [!NOTE]
+> **Remote-machine editing POC:** this branch adds the separate
+> `remote-nvim-poc` mod, which runs Neovim with the remote host's configuration.
+> [Preview and install instructions](herdr-app/REMOTE-POC.md).
+> The upstream installer below still installs the original local-only app mod.
+
 > [!TIP]
 > Using the **herdr TUI** (terminal)? Its guide is [TUI.md](TUI.md).
 

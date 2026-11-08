@@ -3,6 +3,19 @@ on:
   push:
   pull_request:
 jobs:
+  remote-poc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python3 herdr-app/e2e/test_remote_poc.py
+      - run: node herdr-app/e2e/remote-poc-model.mjs
+
   test:
     runs-on: ubuntu-latest
     steps:
